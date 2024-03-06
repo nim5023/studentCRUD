@@ -1,7 +1,5 @@
-package com.nim5023.SpringDemo.rest.controller;
+package com.nim5023.SpringDemo.exception;
 
-import com.nim5023.SpringDemo.rest.exception.StudentErrorResponse;
-import com.nim5023.SpringDemo.rest.exception.StudentNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -16,6 +14,6 @@ public class StudentRestExceptionHandler {
         studentErrorResponse.setStatus(HttpStatus.NOT_FOUND.value());
         studentErrorResponse.setMessage(exception.getMessage());
         studentErrorResponse.setTimeStamp(System.currentTimeMillis());
-        return new ResponseEntity<>(studentErrorResponse, HttpStatus.ALREADY_REPORTED);
+        return new ResponseEntity<>(studentErrorResponse, HttpStatus.NOT_FOUND);
     }
 }

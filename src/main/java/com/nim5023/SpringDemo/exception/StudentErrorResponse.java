@@ -1,4 +1,4 @@
-package com.nim5023.SpringDemo.rest.exception;
+package com.nim5023.SpringDemo.exception;
 
 public class StudentErrorResponse {
     private int status;

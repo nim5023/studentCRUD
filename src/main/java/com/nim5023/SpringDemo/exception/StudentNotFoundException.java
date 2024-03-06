@@ -1,7 +1,4 @@
-package com.nim5023.SpringDemo.rest.exception;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+package com.nim5023.SpringDemo.exception;
 
 //@ResponseStatus(HttpStatus.IM_USED)
 public class StudentNotFoundException extends RuntimeException {
