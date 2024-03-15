@@ -31,6 +31,7 @@ public class DemoSecurityConfig {
                         .requestMatchers(HttpMethod.PUT, "/students").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.POST, "/students").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.DELETE, "/students/**").hasRole("ADMIN")
+                        .anyRequest().permitAll()
         );
         httpSecurity.httpBasic(Customizer.withDefaults());
         httpSecurity.csrf(AbstractHttpConfigurer::disable);

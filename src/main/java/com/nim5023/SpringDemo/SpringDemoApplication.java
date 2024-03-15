@@ -1,5 +1,10 @@
 package com.nim5023.SpringDemo;
 
+import com.nim5023.SpringDemo.dao.StudentDAO;
+import com.nim5023.SpringDemo.dao.StudentDAOImpl;
+import com.nim5023.SpringDemo.entity.Student;
+import com.nim5023.SpringDemo.service.StudentService;
+import com.nim5023.SpringDemo.service.StudentServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,11 +18,14 @@ public class SpringDemoApplication {
     }
 
 
-    @Bean
-    CommandLineRunner commandLineRunner() {
-        return runner -> {
-            System.out.println("Start!");
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
+//        return runner -> {
+//            StudentService studentService = new StudentServiceImpl(studentDAO);
+//            System.out.println("STARTING....");
+//            studentService.findAll();
+//
+//        };
+//    }
 
 }
